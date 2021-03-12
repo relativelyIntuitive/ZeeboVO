@@ -1,0 +1,11 @@
+.vscode
+py3Env/
+env/
+venv/
+media/
+__pycache__/
+.vscode/
+db.sqlite3
+secret_key.txt
+aws_rootkey.txt
+aws_rootkey_id.txt
