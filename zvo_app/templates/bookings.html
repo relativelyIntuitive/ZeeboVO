@@ -143,7 +143,7 @@
                             {% if messages %}
                             <div class="row">
                                 <div class="col">
-                                    <ul class="messages">
+                                    <ul id="bookings_msgs" class="messages">
                                         {% for message in messages %}
                                         <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
                                             <p>{{message}}</p>
