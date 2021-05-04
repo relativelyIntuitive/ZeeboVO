@@ -62,9 +62,6 @@ ul {
     text-shadow: -0.5px 0 #0d0d0e, 0 0.5px #0d0d0e, 0.5px 0 #0d0d0e, 0 -0.5px #0d0d0e;
 }
 
-.booking-msgs {
-    text-align: center;
-}
 
 .custom-file-label {
     overflow: hidden;
@@ -139,6 +136,10 @@ ul {
     width: 18rem;
     margin: 1.25rem 1.25rem 1.25rem 0rem;
     border: 3px solid #800080
+}
+
+#booking_msg {
+    text-align: center;
 }
 
 #inbox_head {
