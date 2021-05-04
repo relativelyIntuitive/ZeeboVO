@@ -144,7 +144,7 @@ ul {
 }
 
 #bookings_msgs {
-    margin-left: -40px;
+    padding-inline-start: 0px;
 }
 
 #inbox_head {
