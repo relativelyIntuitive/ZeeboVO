@@ -62,7 +62,6 @@ ul {
     text-shadow: -0.5px 0 #0d0d0e, 0 0.5px #0d0d0e, 0.5px 0 #0d0d0e, 0 -0.5px #0d0d0e;
 }
 
-
 .custom-file-label {
     overflow: hidden;
 }
@@ -138,6 +137,10 @@ ul {
     border: 3px solid #800080
 }
 
+#booking_msgs {
+    padding-inline-start: 0px;
+}
+
 #inbox_head {
     color: #800080;
 }
@@ -194,10 +197,6 @@ ul {
 
 textarea.form-control {
     height: 5.71rem;
-}
-
-ul.messages {
-    padding-inline-start: 0px;
 }
 
 #footer p{
