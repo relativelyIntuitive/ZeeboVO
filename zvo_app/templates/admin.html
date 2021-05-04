@@ -60,7 +60,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/relativelyintuitive/" target="_blank">
-                            <img id="li_icon" src="{% static 'images/github_icon_square_orange.png' %}" alt="missing icon!">
+                            <img id="gh_icon" src="{% static 'images/github_icon_square_orange.png' %}" alt="missing icon!">
                         </a>
                     </li>
                 </ul>
@@ -115,7 +115,7 @@
                                     {% else %}
                                 <tr>
                                     {% endif %}
-                                    <th scope="row"><a href="/admin/view/{{message.id}}"> {{message.id}} </a></th>
+                                    <th scope="row"><a href="/admin/view/message/{{message.id}}"> {{message.id}} </a></th>
                                     <td> {{message.created_at}} </td>
                                     <td> {{message.name}} </td>
                                     <td><a href="/admin/view/message/{{message.id}}"> {{message.content}} </a></td>
