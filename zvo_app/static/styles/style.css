@@ -62,6 +62,10 @@ ul {
     text-shadow: -0.5px 0 #0d0d0e, 0 0.5px #0d0d0e, 0.5px 0 #0d0d0e, 0 -0.5px #0d0d0e;
 }
 
+.booking-msgs {
+    text-align: center;
+}
+
 .custom-file-label {
     overflow: hidden;
 }

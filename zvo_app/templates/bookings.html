@@ -146,7 +146,7 @@
                                     <ul class="messages">
                                         {% for message in messages %}
                                         <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
-                                            <p>{{message}}</p>
+                                            <p class="booking-msgs">{{message}}</p>
                                         </li>
                                         {% endfor %}
                                     </ul>
