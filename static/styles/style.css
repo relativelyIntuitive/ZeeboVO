@@ -1,3 +1,9 @@
+ /* || Global Resets */
+ * {
+    margin: 0;
+    padding: 0;
+}
+
 
 /* || <TAG> Selectors */
 body {
@@ -36,7 +42,6 @@ tr {
 }
 
 ul {
-    padding-inline-start: 0px;
     list-style-type: none;
 }
 
