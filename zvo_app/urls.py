@@ -19,7 +19,7 @@ urlpatterns = [
     path('admin', views.admin),
     path('admin/inbox-sort/<str:sortBy>', views.admin_sort),
     path('admin/view/message/<int:msgId>', views.admin_view),
-    path('admin/view/<int:msgId>/delete', views.admin_delete_message),
+    path('admin/delete/message/<int:msgId>', views.admin_delete_message),
     path('admin/post/article', views.news),
     path('admin/delete/article/<int:articleId>', views.admin_delete_article),
     path('admin/post/demo', views.demos),

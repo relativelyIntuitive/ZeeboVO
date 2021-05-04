@@ -137,6 +137,10 @@ ul {
     border: 3px solid #800080
 }
 
+#booking_msgs {
+    padding-inline-start: 0px;
+}
+
 #inbox_head {
     color: #800080;
 }
@@ -215,7 +219,7 @@ textarea.form-control {
     #wrapper.admin, #wrapper.view, #wrapper.login {
         background-image: url("/static/images/backgrounds/mixing_table_portrait.jpeg");
     }
-
+    
     #greetings_vid {
         border: 3px solid #800080;
         width: 95%;

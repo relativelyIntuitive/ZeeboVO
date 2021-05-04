@@ -33,7 +33,7 @@
 
             <a id="logo" class="navbar-brand" href="/">
                 <img id="z_icon" src="{% static 'images/favicon.ico' %}">
-                <span class="logo_zeebo"> eebo</span><span class="logo_vo">VO </span>
+                <span class="logo_zeebo"> eebo</span><span class="logo_vo"><strong>VO </strong></span>
             </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -60,7 +60,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/relativelyintuitive/" target="_blank">
-                            <img id="li_icon" src="{% static 'images/github_icon_square_orange.png' %}" alt="missing icon!">
+                            <img id="gh_icon" src="{% static 'images/github_icon_square_orange.png' %}" alt="missing icon!">
                         </a>
                     </li>
                 </ul>
@@ -70,7 +70,7 @@
         <div class="content container">
             <div class="row">
                 <div class="col">
-                    <a href="/admin/view/{{inquiry.id}}/delete" class="btn-primary"> -DELETE- </a>
+                    <a href="/admin/delete/message/{{inquiry.id}}" class="btn-primary"> -DELETE- </a>
                 </div>
             </div>
             <div class="row">
