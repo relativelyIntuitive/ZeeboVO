@@ -138,11 +138,6 @@ ul {
     border: 3px solid #800080
 }
 
-#booking_msgs {
-    padding-inline-start: 0px;
-    text-align: center;
-}
-
 #inbox_head {
     color: #800080;
 }
@@ -201,6 +196,10 @@ textarea.form-control {
     height: 5.71rem;
 }
 
+ul.messages {
+    padding-inline-start: 0px;
+}
+
 #footer p{
     color: #adff2f;
     margin: 1rem;
@@ -221,7 +220,7 @@ textarea.form-control {
     #wrapper.admin, #wrapper.view, #wrapper.login {
         background-image: url("/static/images/backgrounds/mixing_table_portrait.jpeg");
     }
-
+    
     #greetings_vid {
         border: 3px solid #800080;
         width: 95%;
