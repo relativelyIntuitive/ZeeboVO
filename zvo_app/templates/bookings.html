@@ -143,10 +143,10 @@
                             {% if messages %}
                             <div class="row">
                                 <div class="col">
-                                    <ul class="messages">
+                                    <ul id="booking_msgs" class="messages">
                                         {% for message in messages %}
                                         <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
-                                            <p class="booking-msgs">{{message}}</p>
+                                            <p>{{message}}</p>
                                         </li>
                                         {% endfor %}
                                     </ul>
