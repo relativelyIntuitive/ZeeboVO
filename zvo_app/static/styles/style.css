@@ -103,6 +103,19 @@ ul {
     padding: 8rem 0rem;
 }
 
+.socialIcon {
+    width: 2rem;
+    margin: -4px 0px 0px 0px;
+    border: 2px solid #800080;
+    border-radius: 11px;
+    box-shadow: 0px 0px 1px #adff2f inset, 0px 0px 8px #adff2f;
+}
+
+    .socialIcon:hover {
+        box-shadow: 0px 0px 1px #ffa500 inset, 0px 0px 8px #ffa500;
+    }
+
+
 /* || #ID Selectors */
 #wrapper {
     background-color: #0d0d0e;
@@ -223,19 +236,6 @@ textarea.form-control {
 
     #header .nav-link:focus {
         color: #ffa500!important;
-    }
-
-    
-#header .socialIcon {
-    width: 2rem;
-    margin: -4px 0px 0px 0px;
-    border: 2px solid #800080;
-    border-radius: 11px;
-    box-shadow: 0px 0px 1px #adff2f inset, 0px 0px 8px #adff2f;
-}
-
-    #header .socialIcon:hover {
-        box-shadow: 0px 0px 1px #ffa500 inset, 0px 0px 8px #ffa500;
     }
 
 #footer .btn-link {
