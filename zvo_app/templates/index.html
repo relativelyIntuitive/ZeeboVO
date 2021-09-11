@@ -142,21 +142,23 @@
     <script type="text/javascript">
         // fadeIn pages
         $(document).ready(function () {
+            // fadeIn pages
             $('#wrapper').hide().fadeIn(1500);
+            // handle fadeOut and redirect
+            $(document).on("click", ".nav-link", function () {
+                // store redirect link
+                let href = $(this).attr('href');
+                // fadeout page before redirect
+                $('#wrapper').fadeOut(1000);
+                // redirect as intended
+                window.location = href;
+                // prevent default redirect
+                return false;
+            });
+            // prevent default behavior
             return false;
         });
 
-        // handle fadeOut and redirect
-        $(document).on("click", ".nav-link", function () {
-            // store redirect link
-            let href = $(this).attr('href');
-            // fadeout page before redirect
-            $('#wrapper').fadeOut(1000);
-            // redirect as intended
-            window.location = href;
-            // prevent default redirect
-            return false;
-        });
     </script>
 
 </body>
