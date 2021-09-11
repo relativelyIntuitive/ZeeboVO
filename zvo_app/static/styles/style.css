@@ -239,11 +239,11 @@ textarea.form-control {
 }
 
     #header .nav-link:hover {
-        color: #ffa500;
+        color: #ffa500!important;
     }
 
     #header .nav-link:focus {
-        color: #ffa500;
+        color: #ffa500!important;
     }
 
 #footer .btn-link {
