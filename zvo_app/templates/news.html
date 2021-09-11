@@ -106,7 +106,7 @@
                         <h5> {{article.created_at}} </h5>
                         <p> {{article.body | safe | linebreaksbr}} </p>
                         {% if userIsAdmin %}
-                        <a href="admin/delete/article/{{article.id}}" class="btn-primary"> -Delete- </a>
+                        <a href="admin/delete/article/{{article.id}}" class="btn-primary btn-sm"> -Delete- </a>
                         {% endif %}
                     </div>
                 </div>
