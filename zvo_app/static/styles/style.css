@@ -104,10 +104,11 @@ ul {
 }
 
 .socialIcon {
+    width: 2rem;
+    margin: -4px 0px 0px 0px;
     border: 2px solid #800080;
     border-radius: 11px;
     box-shadow: 0px 0px 1px #adff2f inset, 0px 0px 8px #adff2f;
-    margin: 0 0.45rem;
 }
 
     .socialIcon:hover {
@@ -143,16 +144,6 @@ ul {
 
 #logo {
     margin-right: 0rem;
-}
-
-#li_icon {
-    width: 2rem;
-    margin: -4px 0px 0px 0px;
-}
-
-#gh_icon {
-    width: 2rem;
-    margin: -4px 0px 0px 0px;
 }
 
 #greetings_vid {
