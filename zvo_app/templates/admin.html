@@ -424,11 +424,27 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
 
+    <!-- jQuery scripts -->
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-
     <script type="text/javascript">
+        // fadeIn pages
         $(document).ready(function () {
+            // fadeIn pages
             $('#wrapper').hide().fadeIn(1500);
+            // handle fadeOut and redirect
+            $(document).on("click", ".nav-link", function () {
+                // store redirect link
+                let href = $(this).attr('href');
+                // fadeout page before redirect
+                $('#wrapper').fadeOut(1000, function () {
+                    // redirect as intended when fadeOut completes
+                    window.location = href;
+                });
+                // prevent default redirect
+                return false;
+            });
+            // prevent default behavior
+            return false;
         });
     </script>
 
