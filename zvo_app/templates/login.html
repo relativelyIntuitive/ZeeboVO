@@ -155,13 +155,13 @@
         // fadeIn pages
         $(document).ready(function () {
             // fadeIn pages
-            $('#wrapper').hide().fadeIn(1500);
+            $('#wrapper').hide().fadeIn(1000);
             // handle fadeOut and redirect
             $(document).on("click", ".nav-link", function () {
                 // store redirect link
                 let href = $(this).attr('href');
                 // fadeout page before redirect
-                $('#wrapper').fadeOut(1000, function () {
+                $('#wrapper').fadeOut(500, function () {
                     // redirect as intended when fadeOut completes
                     window.location = href;
                 });
