@@ -28,9 +28,9 @@
     <div id="wrapper" class="admin container">
         <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <a id="logo" class="navbar-brand" href="/">
                 <img id="z_icon" src="{% static 'images/zeebovo_icon.png' %}">
@@ -56,12 +56,14 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.linkedin.com/in/relativelyintuitive/" target="_blank">
-                            <img class="socialIcon" src="{% static 'images/linkedin_icon_square_orange.png' %}" alt="missing icon!">
+                            <img class="socialIcon" src="{% static 'images/linkedin_icon_square_orange.png' %}"
+                                alt="missing icon!">
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/relativelyintuitive/" target="_blank">
-                            <img class="socialIcon" src="{% static 'images/github_icon_square_orange.png' %}" alt="missing icon!">
+                            <img class="socialIcon" src="{% static 'images/github_icon_square_orange.png' %}"
+                                alt="missing icon!">
                         </a>
                     </li>
                 </ul>
@@ -116,7 +118,8 @@
                                     {% else %}
                                 <tr>
                                     {% endif %}
-                                    <th scope="row"><a href="/admin/view/message/{{message.id}}"> {{message.id}} </a></th>
+                                    <th scope="row"><a href="/admin/view/message/{{message.id}}"> {{message.id}} </a>
+                                    </th>
                                     <td> {{message.created_at}} </td>
                                     <td> {{message.name}} </td>
                                     <td><a href="/admin/view/message/{{message.id}}"> {{message.content}} </a></td>
@@ -271,8 +274,9 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"> Paragraph 1 </span>
                                     </div>
-                                    <textarea name="aboutP1" placeholder="About paragraph 1 text here..." maxlength="1500"
-                                        class="form-control" aria-label="About paragraph 1 field"></textarea>
+                                    <textarea name="aboutP1" placeholder="About paragraph 1 text here..."
+                                        maxlength="1500" class="form-control"
+                                        aria-label="About paragraph 1 field"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -282,8 +286,9 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"> Paragraph 2 </span>
                                     </div>
-                                    <textarea name="aboutP2" placeholder="About paragraph 2 text here..." maxlength="1500"
-                                        class="form-control" aria-label="About paragraph 2 field"></textarea>
+                                    <textarea name="aboutP2" placeholder="About paragraph 2 text here..."
+                                        maxlength="1500" class="form-control"
+                                        aria-label="About paragraph 2 field"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -381,7 +386,8 @@
                                         <span class="input-group-text" id="basic-addon1"> Confirm New Password: </span>
                                     </div>
                                     <input name="confNewPw" type="password" class="form-control"
-                                        placeholder="Confirm new password here..." aria-label="Confirm new password field">
+                                        placeholder="Confirm new password here..."
+                                        aria-label="Confirm new password field">
                                 </div>
                             </div>
                         </div>
@@ -418,5 +424,14 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
 
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#wrapper').hide().fadeIn(1500);
+        });
+    </script>
+
 </body>
+
 </html>

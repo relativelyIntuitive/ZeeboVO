@@ -28,9 +28,9 @@
     <div id="wrapper" class="login container">
         <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <a id="logo" class="navbar-brand" href="/">
                 <img id="z_icon" src="{% static 'images/zeebovo_icon.png' %}">
@@ -56,12 +56,14 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.linkedin.com/in/relativelyintuitive/" target="_blank">
-                            <img class="socialIcon" src="{% static 'images/linkedin_icon_square_orange.png' %}" alt="IG_Icon">
+                            <img class="socialIcon" src="{% static 'images/linkedin_icon_square_orange.png' %}"
+                                alt="IG_Icon">
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/relativelyintuitive/" target="_blank">
-                            <img class="socialIcon" src="{% static 'images/github_icon_square_orange.png' %}" alt="missing icon!">
+                            <img class="socialIcon" src="{% static 'images/github_icon_square_orange.png' %}"
+                                alt="missing icon!">
                         </a>
                     </li>
                 </ul>
@@ -147,6 +149,14 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
 
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#wrapper').hide().fadeIn(1500);
+        });
+    </script>
+
 </body>
 
-</html> 
+</html>
