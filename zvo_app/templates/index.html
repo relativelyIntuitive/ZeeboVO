@@ -149,9 +149,10 @@
                 // store redirect link
                 let href = $(this).attr('href');
                 // fadeout page before redirect
-                $('#wrapper').fadeOut(1000);
-                // redirect as intended
-                window.location = href;
+                $('#wrapper').fadeOut(1000, function(){
+                    // redirect as intended when fadeOut completes
+                    window.location = href;
+                });
                 // prevent default redirect
                 return false;
             });
