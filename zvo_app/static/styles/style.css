@@ -74,11 +74,25 @@ ul {
 
 .btn-primary {
     background-color: #ffa500;
-    color: #343a40;
-    border: 0.31rem solid #800080;
+    color: #36383a;
+    border: 3px solid #800080;
     font-weight: bold;
     text-align: center;
 }
+
+    .btn-primary:focus {
+        color: #36383a!important;
+        background-color: #ffa500!important;
+        border: 3px solid #800080!important;
+        box-shadow: 0px 0px 1px #ffa500 inset, 0px 0px 8px #ffa500!important;
+    }
+
+    .btn-primary:hover {
+        color: #36383a!important;
+        background-color: #ffa500!important;
+        border: 3px solid #ffa500!important;
+        box-shadow: 0px 0px 1px #ffa500 inset, 0px 0px 8px #ffa500!important;
+    }
 
 .inbox.container {
     height: 11rem;
@@ -89,6 +103,16 @@ ul {
     padding: 8rem 0rem;
 }
 
+.socialIcon {
+    border: 2px solid #800080;
+    border-radius: 11px;
+    box-shadow: 0px 0px 1px #adff2f inset, 0px 0px 8px #adff2f;
+    margin: 0 0.45rem;
+}
+
+    .socialIcon:hover {
+        box-shadow: 0px 0px 1px #ffa500 inset, 0px 0px 8px #ffa500;
+    }
 
 /* || #ID Selectors */
 #wrapper {
@@ -213,6 +237,14 @@ textarea.form-control {
 #header .nav-link {
     color: #adff2f;
 }
+
+    #header .nav-link:hover {
+        color: #ffa500;
+    }
+
+    #header .nav-link:focus {
+        color: #ffa500;
+    }
 
 #footer .btn-link {
     color: #adff2f;
