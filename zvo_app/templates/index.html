@@ -142,6 +142,10 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#wrapper').hide().fadeIn(1500);
+
+            $(document).on("click", ".nav-link", function () {
+                $('#wrapper').fadeOut(1000);
+            });
         });
     </script>
 
