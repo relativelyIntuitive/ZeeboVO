@@ -142,12 +142,11 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#wrapper').hide().fadeIn(1500);
+            return false;
+        });
 
-            $(document).on("click", ".nav-link", function () {
-                $('#wrapper').fadeOut(1000);
-                return false;
-            });
-
+        $(document).on("click", ".nav-link", function () {
+            $('#wrapper').fadeOut(1000);
             return false;
         });
     </script>
