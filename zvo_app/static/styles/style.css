@@ -188,8 +188,7 @@ ul {
 }
 
 #login_form {
-    max-width: 100vw;
-    width: 45%;
+    max-width: 75vw;
 }
 
 #login_greeting {
