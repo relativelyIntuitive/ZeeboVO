@@ -125,11 +125,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-# STATIC_URL = '/static/'
-# STATIC_ROOT = BASE_DIR / 'static'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # extra deployment settings
 CSRF_COOKIE_SECURE = True
@@ -147,14 +147,14 @@ AWS_STORAGE_BUCKET_NAME = 'zeebovo-media'
 AWS_S3_CUSTOM_DOMAIN = 'dcc8vfmac96il.cloudfront.net'
 
 # could not get styles to load from S3...images loaded fine...serving static locally for now
-AWS_LOCATION = 'static'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
+# AWS_LOCATION = 'static'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'static',
+# ]
 
-DEFAULT_FILE_STORAGE = 'ZeeboVO.storage_backends.MediaStorage'
+# DEFAULT_FILE_STORAGE = 'ZeeboVO.storage_backends.MediaStorage'
 
-AWS_S3_REGION_NAME = 'us-east-2'
-AWS_S3_ENDPOINT_URL = 'https://s3.us-east-2.amazonaws.com'
+# AWS_S3_REGION_NAME = 'us-east-2'
+# AWS_S3_ENDPOINT_URL = 'https://s3.us-east-2.amazonaws.com'
