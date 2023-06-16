@@ -138,13 +138,13 @@ SESSION_COOKIE_SECURE = True
 CONN_MAX_AGE = 420
 
 # S3 bucket for byte-range request Safari support
-with open(BASE_DIR / 'ZeeboVO/aws_rootkey_id.txt') as f:
-    AWS_ACCESS_KEY_ID = f.read().strip()
-with open(BASE_DIR / 'ZeeboVO/aws_rootkey.txt') as f:
-    AWS_SECRET_ACCESS_KEY = f.read().strip()
+# with open(BASE_DIR / 'ZeeboVO/aws_rootkey_id.txt') as f:
+#     AWS_ACCESS_KEY_ID = f.read().strip()
+# with open(BASE_DIR / 'ZeeboVO/aws_rootkey.txt') as f:
+#     AWS_SECRET_ACCESS_KEY = f.read().strip()
 
-AWS_STORAGE_BUCKET_NAME = 'zeebovo-media'
-AWS_S3_CUSTOM_DOMAIN = 'dcc8vfmac96il.cloudfront.net'
+# AWS_STORAGE_BUCKET_NAME = 'zeebovo-media'
+# AWS_S3_CUSTOM_DOMAIN = 'dcc8vfmac96il.cloudfront.net'
 
 # could not get styles to load from S3...images loaded fine...serving static locally for now
 # AWS_LOCATION = 'static'
