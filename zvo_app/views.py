@@ -12,10 +12,8 @@ def home(request):
         else:
             errors = {}
 
-            if len(request.POST['backupUrl']) < 1 and not request.FILES:
-                errors['videoChange'] = "Both video fields are blank!"
-            elif not request.FILES:
-                errors['videoFile'] = "A video file upload MUST be included with each update!"
+            if len(request.POST['url']) < 1:
+                errors['videoChange'] = "URL is blank!"
 
             if len(errors) > 0:
                 for key, value in errors.items():
@@ -23,17 +21,15 @@ def home(request):
                 return redirect('/admin')
             else:
                 if len(Video.objects.all()) == 0:
-                    Video.objects.create(file = request.FILES['videoFile'], backup_url = request.POST['backupUrl'])
+                    Video.objects.create(url = request.POST['url'])
                 else:
                     Video.objects.first().delete()
-                    Video.objects.create(file = request.FILES['videoFile'], backup_url = request.POST['backupUrl'])
+                    Video.objects.create(url = request.POST['url'])
 
                 messages.success(request, "Greetings Video successfully updated !")
                 return redirect('/')
     else:
-        context = {
-            'video': Video.objects.first()
-        }
+        context = {'video': Video.objects.first()}
         return render(request, 'index.html', context)
 
 

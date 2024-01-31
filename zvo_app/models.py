@@ -140,21 +140,13 @@ class Demo(models.Model):
 
 
 class Video(models.Model):
-    file = models.FileField(upload_to='videos/')
     # the backup-url is intended to allow a secondary source for serving the file from a remote server
-    backup_url = models.URLField()
+    url = models.URLField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    # .delete() override ensures the associated file will always be deleted
-    def delete(self):
-        file = self.file
-        if file:
-            file.delete()
-        super(Video, self).delete()
-
     def __str___(self):
-        return f"<Video object: {self.file.url} (Updated: {self.updated_at})>"
+        return f"<Video object: {self.url} (Updated: {self.updated_at})>"
 
 class About(models.Model):
     pic = models.FileField(upload_to='pics/')
