@@ -103,15 +103,14 @@
             <br>
             <div class="row">
                 <div class="col">
-                    <div class="container">
+                    <div class="container" style="background-color: #800080ec;">
                         <h3> {{demo.label}} </h3>
-                        <p>
-                            <h5> {{demo.genre}} </h5>
-                        </p>
+                        <h5> {{demo.genre}} </h5>
                         <audio controls controlslist="nodownload">
                             <source src="{{demo.file.url}}" type="audio/wav">
                             Your browser does not support this audio element.
                         </audio>
+                        <br>
                         <br>
                         {% if userIsAdmin %}
                         <a href="admin/delete/demo/{{demo.id}}" class="btn-primary btn-sm"> -Delete- </a>
