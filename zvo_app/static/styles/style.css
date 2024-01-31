@@ -145,10 +145,6 @@ ul {
     flex-grow: 0;
 }
 
-#nav_item_active {
-    color: #800080;
-}
-
 #z_icon {
     width: 1.75rem;
     margin: -4px -5px 0px 0px;
@@ -234,6 +230,10 @@ textarea.form-control {
 #footer p{
     color: #adff2f;
     margin: 1rem;
+}
+
+#nav_item_active .nav-link .disabled a{
+    color: #800080;
 }
 
 #header .nav-link {
