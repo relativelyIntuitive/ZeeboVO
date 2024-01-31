@@ -145,6 +145,10 @@ ul {
     flex-grow: 0;
 }
 
+#nav_item_active {
+    color: #800080;
+}
+
 #z_icon {
     width: 1.75rem;
     margin: -4px -5px 0px 0px;
