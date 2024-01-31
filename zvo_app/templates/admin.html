@@ -308,35 +308,18 @@
             <div class="row">
                 <div id="video_form" class="container">
                     <h3> Update Video </h3>
-                    <h5> (associated override url will be cleared to null on every submission unless provided!) </h5>
                     <form action="/admin/update/video" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="row">
                             <div class="col">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"> File </span>
-                                    </div>
-                                    <div class="custom-file">
-                                        <input name="videoFile" type="file" class="custom-file-input"
-                                            id="inputGroupFile01">
-                                        <label class="custom-file-label" for="inputGroupFile01"> .MP4 file upload
-                                            here...
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"> Source-override URL?
+                                        <span class="input-group-text" id="basic-addon1"> Video URL
                                         </span>
                                     </div>
                                     <input name="backupUrl" type="url" class="form-control"
-                                        placeholder="Paste http / https URL here..."
-                                        aria-label="Backup-video URL field">
+                                        placeholder="Paste video URL here..."
+                                        aria-label="Video URL field">
                                 </div>
                             </div>
                         </div>
