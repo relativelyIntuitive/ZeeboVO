@@ -74,6 +74,7 @@ ul {
 
 .btn-primary {
     background-color: #ffa500;
+    border-radius: 12px;
     color: #36383a;
     border: 3px solid #800080;
     font-weight: bold;
