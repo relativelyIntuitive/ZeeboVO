@@ -232,7 +232,7 @@ textarea.form-control {
     margin: 1rem;
 }
 
-#nav_item_active .nav-link .disabled a{
+#nav_item_active .nav-link .disabled{
     color: #800080;
 }
 
