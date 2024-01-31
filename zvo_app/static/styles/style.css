@@ -233,8 +233,11 @@ textarea.form-control {
 }
 
 #header .nav-link {
-    color: #800080;
+    color: #adff2f;
 }
+    #header .nav-link .disabled {
+        color: #800080;
+    }
 
     #header .nav-link:hover {
         color: #ffa500!important;
