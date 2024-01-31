@@ -46,12 +46,16 @@ ul {
 }
 
 /* || .CLASS Selectors */
-.logo_zeebo {
-    color: #ffa500;
+.zeebo_purple {
+    color: #800080;
 }
 
-.logo_vo {
-    color: #800080;
+.zeebo_green {
+    color: #adff2f;
+}
+
+.zeebo_orange {
+    color: #ffa500;
 }
 
 .content {
