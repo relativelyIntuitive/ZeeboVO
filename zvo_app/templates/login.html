@@ -105,7 +105,7 @@
                                 <ul class="messages">
                                     {% for message in messages %}
                                     <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
-                                        <p>{{message}}</p>
+                                        <p><strong>{{message}}</strong></p>
                                     </li>
                                     {% endfor %}
                                 </ul>

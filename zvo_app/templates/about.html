@@ -82,7 +82,7 @@
                     <ul class="messages">
                         {% for message in messages %}
                         <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
-                            <p>{{message}}</p>
+                            <p><strong>{{message}}</strong></p>
                         </li>
                         {% endfor %}
                     </ul>
@@ -93,12 +93,12 @@
             <img id="selfie" src="{{about.pic.url}}" alt="Photo of Zack">
             <h3>{{about.header}}</h3>
             <br>
-            <p>
+            <p><strong>
                 &emsp; {{about.paragraph_1}}
                 <br>
                 <br>
                 &emsp; {{about.paragraph_2}}
-            </p>
+            </strong></p>
             <br>
             <br>
         </div>
