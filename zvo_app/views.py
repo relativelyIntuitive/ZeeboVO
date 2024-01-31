@@ -4,7 +4,7 @@ from django.conf import settings
 from .models import *
 import bcrypt
 import smtplib, ssl
-from ..ZeeboVO import secrets
+from ZeeboVO import secrets
 
 
 
