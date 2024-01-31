@@ -95,6 +95,19 @@
                     <div id="contact_form" class="container">
                         <form action="/user/send" method="POST">
                             {% csrf_token %}
+                            {% if messages %}
+                            <div class="row">
+                                <div class="col">
+                                    <ul id="bookings_msgs" class="messages">
+                                        {% for message in messages %}
+                                        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+                                            <p>{{message}}</p>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            {% endif %}
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group mb-3">
@@ -138,25 +151,12 @@
                                             </span>
                                         </div>
                                         <input name="msgURL" type="url" class="form-control"
-                                            placeholder="Paste http / https URL here..."
+                                            placeholder="Paste http:// or https:// URL here..."
                                             aria-label="Optional script URL field">
                                     </div>
                                 </div>
                             </div>
                             <br>
-                            {% if messages %}
-                            <div class="row">
-                                <div class="col">
-                                    <ul id="bookings_msgs" class="messages">
-                                        {% for message in messages %}
-                                        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
-                                            <p>{{message}}</p>
-                                        </li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                            </div>
-                            {% endif %}
                             <p>
                                 Please include as many details as possible in your initial message. Be sure to let me
                                 know exactly WHAT you want read, HOW you want it read and WHEN you need it delivered
