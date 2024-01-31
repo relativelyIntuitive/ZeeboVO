@@ -183,10 +183,10 @@ def bookings(request):
             ZeeboVO booking request from: "{request.POST['msgName']}"
             Reply to: "{request.POST['msgEmail']}"
 
-            Script URL: {request.POST['msgURL']}
+            Script URL: "{request.POST['msgURL']}"
 
             Message:
-                {request.POST['msgContent']}"""
+                "{request.POST['msgContent']}" """
             context = ssl.create_default_context()
             with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
                 server.login(smtp_email, password)
