@@ -22,7 +22,7 @@
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
     <meta property=”og:image” content="{% static 'images/favicon.ico' %}">
 
-    <title> About ZeeboVO </title>
+    <title>About ZeeboVO</title>
 </head>
 
 <body>
@@ -35,27 +35,30 @@
 
             <a id="logo" class="navbar-brand" href="/">
                 <img id="z_icon" src="{% static 'images/zeebovo_icon.png' %}">
-                <span class="zeebo_orange"> eebo</span><span class="zeebo_purple"><strong>VO </strong></span>
+                <span class="zeebo_orange">eebo</span><span class="zeebo_purple"><strong>VO</strong></span>
             </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/"> Home </a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a id="nav_item_active" class="nav-link disabled" href="/about"><strong><u> About Me </u></strong><span class="sr-only">
-                                (current)
-                            </span></a>
+                        <a id="nav_item_active" class="nav-link disabled" href="/about">
+                            <strong>
+                                <u>About Me</u>
+                            </strong>
+                            <span class="sr-only">(current)</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/demos"> Demos </a>
+                        <a class="nav-link" href="/demos">Demos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/news"> News </a>
+                        <a class="nav-link" href="/news">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/bookings"> Bookings </a>
+                        <a class="nav-link" href="/bookings">Bookings</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.linkedin.com/in/relativelyintuitive/" target="_blank">
@@ -90,7 +93,7 @@
             {% endif %}
 
             <img id="selfie" src="{{about.pic.url}}" alt="Photo of Zack">
-            <h3> {{about.header}} </h3>
+            <h3>{{about.header}}</h3>
             <br>
             <p>
                 &emsp; {{about.paragraph_1}}
@@ -103,8 +106,8 @@
         </div>
 
         <div id="footer">
-            <p><strong> Copyright ©2020 Zachery A. Bielicki, all rights reserved </strong></p>
-            <a class="btn btn-sm btn-link" href="/login"> Admin Dash </a>
+            <p><strong>Copyright ©2020 Zachery A. Bielicki, all rights reserved</strong></p>
+            <a class="btn btn-sm btn-link" href="/login">Admin Dash</a>
         </div>
     </div>
 

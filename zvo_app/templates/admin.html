@@ -22,7 +22,7 @@
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
     <meta property=”og:image” content="{% static 'images/favicon.ico' %}">
 
-    <title> ZeeboVO Admin Dashboard </title>
+    <title>ZeeboVO Admin Dashboard</title>
 </head>
 
 <body>
@@ -35,25 +35,25 @@
 
             <a id="logo" class="navbar-brand" href="/">
                 <img id="z_icon" src="{% static 'images/zeebovo_icon.png' %}">
-                <span class="zeebo_orange"> eebo</span><span class="zeebo_purple"><strong>VO </strong></span>
+                <span class="zeebo_orange">eebo</span><span class="zeebo_purple"><strong>VO</strong></span>
             </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/"> Home </a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about"> About Me </a>
+                        <a class="nav-link" href="/about">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/demos"> Demos </a>
+                        <a class="nav-link" href="/demos">Demos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/news"> News </a>
+                        <a class="nav-link" href="/news">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/bookings"> Bookings </a>
+                        <a class="nav-link" href="/bookings">Bookings</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.linkedin.com/in/relativelyintuitive/" target="_blank">
@@ -75,11 +75,11 @@
             <div class="row">
                 <div class="col">
                     <br>
-                    <h1> Greetings Master! It is I, your faithful website! </h1>
+                    <h1>Greetings Master! It is I, your faithful website!</h1>
                     {% if areNew > 0 %}
-                    <h5> You have {{areNew}} new messages, sire! </h5>
+                    <h5>You have {{areNew}} new messages, sire!</h5>
                     {% else %}
-                    <h5> You have no new messages, sir! </h5>
+                    <h5>You have no new messages, sir!</h5>
                     {% endif %}
                 </div>
             </div>
@@ -104,12 +104,12 @@
                         <table class="table table-dark table-striped table-bordered table-hover table-sm">
                             <thead id="inbox_head">
                                 <tr>
-                                    <th scope="col"><a href="/admin/inbox-sort/id"> id# </a></th>
-                                    <th scope="col"><a href="/admin/inbox-sort/created_at"> Received (UTC) </a></th>
-                                    <th scope="col"><a href="/admin/inbox-sort/name"> Client </a></th>
-                                    <th scope="col"><a href="/admin/inbox-sort/content"> Message </a></th>
-                                    <th scope="col"><a href="/admin/inbox-sort/script_url"> URL </a></th>
-                                    <th scope="col"><a href="/admin/inbox-sort/email"> E-Mail </a></th>
+                                    <th scope="col"><a href="/admin/inbox-sort/id">id#</a></th>
+                                    <th scope="col"><a href="/admin/inbox-sort/created_at">Received (UTC)</a></th>
+                                    <th scope="col"><a href="/admin/inbox-sort/name">Client</a></th>
+                                    <th scope="col"><a href="/admin/inbox-sort/content">Message</a></th>
+                                    <th scope="col"><a href="/admin/inbox-sort/script_url">URL</a></th>
+                                    <th scope="col"><a href="/admin/inbox-sort/email">E-Mail</a></th>
                                 </tr>
                             </thead>
                             <tbody id="inbox_body">
@@ -119,21 +119,21 @@
                                     {% else %}
                                 <tr>
                                     {% endif %}
-                                    <th scope="row"><a href="/admin/view/message/{{message.id}}"> {{message.id}} </a>
+                                    <th scope="row"><a href="/admin/view/message/{{message.id}}">{{message.id}}</a>
                                     </th>
-                                    <td> {{message.created_at}} </td>
-                                    <td> {{message.name}} </td>
-                                    <td><a href="/admin/view/message/{{message.id}}"> {{message.content}} </a></td>
+                                    <td>{{message.created_at}}</td>
+                                    <td>{{message.name}}</td>
+                                    <td><a href="/admin/view/message/{{message.id}}">{{message.content}}</a></td>
                                     <td>
                                         {% if message.script_url|length > 1 %}
-                                        <a href="{{message.script_url}}" target="_blank"> {{message.script_url}} </a>
+                                        <a href="{{message.script_url}}" target="_blank">{{message.script_url}}</a>
                                         {% else %}
                                         N/A
                                         {% endif %}
                                     </td>
                                     <td><a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to={{message.email}}&su=A reply from ZeeboVO&body=-Zack, ZeeboVO&tf=1"
                                             target="_blank">
-                                            {{message.email}} </a></td>
+                                            {{message.email}}</a></td>
                                 </tr>
                                 {% endfor %}
                             </tbody>
@@ -146,14 +146,14 @@
             <div class="row">
                 <div class="col">
                     <div id="news_form" class="container">
-                        <h3> News Post </h3>
+                        <h3>News Post</h3>
                         <form action="/admin/post/article" method="POST">
                             {% csrf_token %}
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1"> Headline </span>
+                                            <span class="input-group-text" id="basic-addon1">Headline</span>
                                         </div>
                                         <input name="articleHeadline" type="text" class="form-control"
                                             placeholder="Article headline here..." aria-label="Article headline field">
@@ -164,7 +164,7 @@
                                 <div class="col">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"> Body </span>
+                                            <span class="input-group-text">Body</span>
                                         </div>
                                         <textarea name="articleBody" placeholder="Article body here..." maxlength="1500"
                                             class="form-control" aria-label="Article body field"></textarea>
@@ -174,7 +174,7 @@
                             <div class="row">
                                 <div class="col"></div>
                                 <div class="col">
-                                    <button type="submit" class="btn-primary btn-md"> Post </button>
+                                    <button type="submit" class="btn-primary btn-md">Post</button>
                                 </div>
                                 <div class="col"></div>
                             </div>
@@ -182,14 +182,14 @@
                     </div>
 
                     <div id="demo_form" class="container">
-                        <h3> Demo Post </h3>
+                        <h3>Demo Post</h3>
                         <form action="/admin/post/demo" method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1"> Label </span>
+                                            <span class="input-group-text" id="basic-addon1">Label</span>
                                         </div>
                                         <input name="demoLabel" type="text" class="form-control"
                                             placeholder="Demo label here..." aria-label="Demo title field">
@@ -200,7 +200,7 @@
                                 <div class="col">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1"> Genre </span>
+                                            <span class="input-group-text" id="basic-addon1">Genre</span>
                                         </div>
                                         <input name="demoGenre" type="text" class="form-control"
                                             placeholder="Demo genre here..." aria-label="Demo genre field">
@@ -211,15 +211,12 @@
                                 <div class="col">
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
-                                            <span class="input-group-text"> File </span>
+                                            <span class="input-group-text">File</span>
                                         </div>
                                         <div class="custom-file">
                                             <input name="demoFile" type="file" class="custom-file-input"
                                                 id="inputGroupFile01">
-                                            <label class="custom-file-label" for="inputGroupFile01"> .WAV file
-                                                upload
-                                                here...
-                                            </label>
+                                            <label class="custom-file-label" for="inputGroupFile01">.WAV file upload here...</label>
                                         </div>
                                     </div>
                                 </div>
@@ -227,7 +224,7 @@
                             <div class="row">
                                 <div class="col"></div>
                                 <div class="col">
-                                    <button type="submit" class="btn-primary btn-md"> Post </button>
+                                    <button type="submit" class="btn-primary btn-md">Post</button>
                                 </div>
                                 <div class="col"></div>
                             </div>
@@ -239,21 +236,19 @@
 
             <div class="row">
                 <div id="about_form" class="container">
-                    <h3> Update About </h3>
+                    <h3>Update About</h3>
                     <form action="/admin/update/about" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="row">
                             <div class="col">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"> Pic </span>
+                                        <span class="input-group-text">Pic</span>
                                     </div>
                                     <div class="custom-file">
                                         <input name="picFile" type="file" class="custom-file-input"
                                             id="inputGroupFile01">
-                                        <label class="custom-file-label" for="inputGroupFile01"> Picture file upload
-                                            here...
-                                        </label>
+                                        <label class="custom-file-label" for="inputGroupFile01">Picture file upload here...</label>
                                     </div>
                                 </div>
                             </div>
@@ -262,7 +257,7 @@
                             <div class="col">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"> Header </span>
+                                        <span class="input-group-text" id="basic-addon1">Header</span>
                                     </div>
                                     <input name="aboutHeader" type="text" class="form-control"
                                         placeholder="About header here..." aria-label="About header field">
@@ -273,7 +268,7 @@
                             <div class="col">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"> Paragraph 1 </span>
+                                        <span class="input-group-text" id="basic-addon1">Paragraph 1</span>
                                     </div>
                                     <textarea name="aboutP1" placeholder="About paragraph 1 text here..."
                                         maxlength="1500" class="form-control"
@@ -285,7 +280,7 @@
                             <div class="col">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"> Paragraph 2 </span>
+                                        <span class="input-group-text" id="basic-addon1">Paragraph 2</span>
                                     </div>
                                     <textarea name="aboutP2" placeholder="About paragraph 2 text here..."
                                         maxlength="1500" class="form-control"
@@ -296,7 +291,7 @@
                         <div class="row">
                             <div class="col"></div>
                             <div class="col">
-                                <button type="submit" class="btn-primary btn-md"> Post </button>
+                                <button type="submit" class="btn-primary btn-md">Post</button>
                             </div>
                             <div class="col"></div>
                         </div>
@@ -307,15 +302,14 @@
 
             <div class="row">
                 <div id="video_form" class="container">
-                    <h3> Update Video </h3>
+                    <h3>Update Video</h3>
                     <form action="/admin/update/video" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="row">
                             <div class="col">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"> Video URL
-                                        </span>
+                                        <span class="input-group-text" id="basic-addon1">Video URL</span>
                                     </div>
                                     <input name="url" type="url" class="form-control"
                                         placeholder="Paste video URL here..."
@@ -326,7 +320,7 @@
                         <div class="row">
                             <div class="col"></div>
                             <div class="col">
-                                <button type="submit" class="btn-primary btn-md"> Post </button>
+                                <button type="submit" class="btn-primary btn-md">Post</button>
                             </div>
                             <div class="col"></div>
                         </div>
@@ -337,14 +331,14 @@
 
             <div class="row">
                 <div id="pw_form" class="container">
-                    <h3> Update Password </h3>
+                    <h3>Update Password</h3>
                     <form action="/admin/update" method="POST">
                         {% csrf_token %}
                         <div class="row">
                             <div class="col">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"> Current Password: </span>
+                                        <span class="input-group-text" id="basic-addon1">Current Password:</span>
                                     </div>
                                     <input name="currentPw" type="password" class="form-control"
                                         placeholder="Current password here..." aria-label="Current password field">
@@ -356,7 +350,7 @@
                             <div class="col">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"> New Password: </span>
+                                        <span class="input-group-text" id="basic-addon1">New Password:</span>
                                     </div>
                                     <input name="newPw" type="password" class="form-control"
                                         placeholder="New password here..." aria-label="New password field">
@@ -367,7 +361,7 @@
                             <div class="col">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"> Confirm New Password: </span>
+                                        <span class="input-group-text" id="basic-addon1">Confirm New Password:</span>
                                     </div>
                                     <input name="confNewPw" type="password" class="form-control"
                                         placeholder="Confirm new password here..."
@@ -378,7 +372,7 @@
                         <div class="row">
                             <div class="col"></div>
                             <div class="col">
-                                <button type="submit" class="btn-primary btn-md"> Update </button>
+                                <button type="submit" class="btn-primary btn-md">Update</button>
                             </div>
                             <div class="col"></div>
                         </div>
@@ -389,14 +383,14 @@
 
             <div class="row">
                 <div class="col">
-                    <p> .../relativelyIntuitive/ </p>
+                    <p>.../relativelyIntuitive/</p>
                 </div>
             </div>
         </div>
 
         <div id="footer">
-            <p><strong> Copyright ©2020 Zachery A. Bielicki, all rights reserved </strong></p>
-            <a class="btn btn-sm btn-link" href="/admin/logout"><strong> Log Out </strong></a>
+            <p><strong>Copyright ©2020 Zachery A. Bielicki, all rights reserved</strong></p>
+            <a class="btn btn-sm btn-link" href="/admin/logout"><strong>Log Out</strong></a>
         </div>
     </div>
 

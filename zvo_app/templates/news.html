@@ -22,7 +22,7 @@
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
     <meta property=”og:image” content="{% static 'images/favicon.ico' %}">
 
-    <title> News from ZeeboVO </title>
+    <title>News from ZeeboVO</title>
 </head>
 
 <body>
@@ -35,28 +35,30 @@
 
             <a id="logo" class="navbar-brand" href="/">
                 <img id="z_icon" src="{% static 'images/zeebovo_icon.png' %}">
-                <span class="zeebo_orange"> eebo</span><span class="zeebo_purple"><strong>VO </strong></span>
+                <span class="zeebo_orange">eebo</span><span class="zeebo_purple"><strong>VO</strong></span>
             </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/"> Home </a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about"> About Me </a>
+                        <a class="nav-link" href="/about">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/demos"> Demos </a>
+                        <a class="nav-link" href="/demos">Demos</a>
                     </li>
                     <li class="nav-item active">
-                        <a id="nav_item_active" class="nav-link disabled" href="/news"><strong><u> News </u></strong><span
-                                class="sr-only">
-                                (current)
-                            </span></a>
+                        <a id="nav_item_active" class="nav-link disabled" href="/news">
+                            <strong>
+                                <u>News</u>
+                            </strong>
+                            <span class="sr-only">(current)</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/bookings"> Bookings </a>
+                        <a class="nav-link" href="/bookings">Bookings</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.linkedin.com/in/relativelyintuitive/" target="_blank">
@@ -93,9 +95,7 @@
                 <div class="col">
                     <div class="container">
                         <h1>
-                            <u>
-                                News
-                            </u>
+                            <u>News</u>
                         </h1>
                     </div>
                 </div>
@@ -106,11 +106,11 @@
             <div class="row">
                 <div class="col">
                     <div class="container">
-                        <h2 class="zeebo_orange"> {{article.headline}} </h2>
-                        <h4 class="zeebo_purple"> {{article.created_at}} </h4>
-                        <p> {{article.body | safe | linebreaksbr}} </p>
+                        <h2 class="zeebo_orange">{{article.headline}}</h2>
+                        <h4 class="zeebo_purple">{{article.created_at}}</h4>
+                        <p>{{article.body | safe | linebreaksbr}}</p>
                         {% if userIsAdmin %}
-                        <a href="admin/delete/article/{{article.id}}" class="btn-primary btn-sm"> -Delete- </a>
+                        <a href="admin/delete/article/{{article.id}}" class="btn-primary btn-sm">-Delete-</a>
                         {% endif %}
                     </div>
                 </div>
@@ -120,8 +120,8 @@
         </div>
 
         <div id="footer">
-            <p><strong> Copyright ©2020 Zachery A. Bielicki, all rights reserved </strong></p>
-            <a class="btn btn-sm btn-link" href="/login"> Admin Dash </a>
+            <p><strong>Copyright ©2020 Zachery A. Bielicki, all rights reserved</strong></p>
+            <a class="btn btn-sm btn-link" href="/login">Admin Dash</a>
         </div>
     </div>
 
