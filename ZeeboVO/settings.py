@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import secrets
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,8 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-with open(BASE_DIR / 'ZeeboVO/secret_key.txt') as f:
-    SECRET_KEY = f.read().strip()
+with open(BASE_DIR / 'ZeeboVO/secrets.py') as f:
+    SECRET_KEY = secrets.django_secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

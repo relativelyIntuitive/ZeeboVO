@@ -3,6 +3,9 @@ from django.contrib import messages
 from django.conf import settings
 from .models import *
 import bcrypt
+import smtplib, ssl
+from ..ZeeboVO import secrets
+
 
 
 def home(request):
@@ -169,6 +172,26 @@ def bookings(request):
         else:
             Message.objects.create(name=request.POST['msgName'], email=request.POST['msgEmail'],
                                    content=request.POST['msgContent'], script_url=request.POST['msgURL'])
+
+            port = 465
+            smtp_email = "zeebovo.app@gmail.com"
+            zeebovo_inbox = "zeebovo@gmail.com"
+            password = input(secrets.smtp_pw)
+            message = f"""\
+            Subject: ZeeboVO booking request from: "{request.POST['msgName']}"
+
+            ZeeboVO booking request from: "{request.POST['msgName']}"
+            Reply to: "{request.POST['msgEmail']}"
+
+            Script URL: {request.POST['msgURL']}
+
+            Message: 
+                {request.POST['msgContent']}"""
+            context = ssl.create_default_context()
+            with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
+                server.login(smtp_email, password)
+                server.sendmail(smtp_email, zeebovo_inbox, message)
+                
             messages.success(request, "Message successfully sent!")
             return redirect('/bookings')
     else:
