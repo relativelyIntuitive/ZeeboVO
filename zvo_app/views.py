@@ -176,7 +176,7 @@ def bookings(request):
             port = 465
             smtp_email = "zeebovo.app@gmail.com"
             zeebovo_inbox = "zeebovo@gmail.com"
-            password = input(secrets.smtp_pw)
+            password = secrets.smtp_pw
             message = f"""\
             Subject: ZeeboVO booking request from: "{request.POST['msgName']}"
 
@@ -185,8 +185,8 @@ def bookings(request):
 
             Script URL: {request.POST['msgURL']}
 
-            Message
-            {request.POST['msgContent']}"""
+            Message:
+                {request.POST['msgContent']}"""
             context = ssl.create_default_context()
             with smtplib.SMTP_SSL("smtp.gmail.com", port, context=context) as server:
                 server.login(smtp_email, password)
