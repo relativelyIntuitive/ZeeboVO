@@ -178,7 +178,7 @@ def bookings(request):
             zeebovo_inbox = "zeebovo@gmail.com"
             password = secrets.smtp_pw
             message = f"""\
-            Subject: ZeeboVO booking request from: "{request.POST['msgName']}"
+            $ ZeeboVO booking request from: "{request.POST['msgName']}" $
 
             ZeeboVO booking request from: "{request.POST['msgName']}"
             Reply to: "{request.POST['msgEmail']}"
