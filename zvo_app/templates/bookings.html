@@ -103,9 +103,7 @@
                                         {% for message in messages %}
                                         <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
                                             <p>
-                                                <strong>
-                                                    {{message}}
-                                                </strong>
+                                                {{message}}
                                             </p>
                                         </li>
                                         {% endfor %}
@@ -156,7 +154,7 @@
                                             </span>
                                         </div>
                                         <input name="msgURL" type="url" class="form-control"
-                                            placeholder="Paste http:// or https:// URL here..."
+                                            placeholder="Paste an http:// or https:// URL here..."
                                             aria-label="Optional script URL field">
                                     </div>
                                 </div>
@@ -175,7 +173,6 @@
                                     </strong>
                                 </p>
                             </div>
-                            <br>
                             <div class="row">
                                 <div class="col"></div>
                                 <div class="col">
