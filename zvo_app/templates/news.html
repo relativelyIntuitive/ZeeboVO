@@ -92,7 +92,7 @@
                 <div class="col">
                     <div class="container">
                         <h1> News: </h1>
-                        <h4> Below you will find a feed of all news & updates related to ZeeboVO! </h4>
+                        <h3> A feed of all news & updates related to ZeeboVO </h3>
                     </div>
                 </div>
             </div>
@@ -103,8 +103,8 @@
                 <div class="col">
                     <div class="container">
                         <br>
-                        <h3> {{article.headline}} </h3>
-                        <h5 class="zeebo_purple"> {{article.created_at}} </h5>
+                        <h2> {{article.headline}} </h2>
+                        <h4 class="zeebo_purple"> {{article.created_at}} </h4>
                         <p> {{article.body | safe | linebreaksbr}} </p>
                         {% if userIsAdmin %}
                         <a href="admin/delete/article/{{article.id}}" class="btn-primary btn-sm"> -Delete- </a>
