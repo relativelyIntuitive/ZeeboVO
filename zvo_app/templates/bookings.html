@@ -81,10 +81,11 @@
                     <div class="container">
                         <h3> Inquiry Form </h3>
                         <br>
-                        <p> For general inquiries, or quotes & estimates, this is the right place to be! Please fill out
+                        <strong<p> For general inquiries, or quotes & estimates, this is the right place to be! Please
+                            fill out
                             the form below, making sure to include a script if applicable and I will respond via e-mail
                             within 2 business days!
-                        </p>
+                            </p></strong>
                     </div>
                 </div>
             </div>
@@ -101,7 +102,11 @@
                                     <ul id="bookings_msgs" class="messages">
                                         {% for message in messages %}
                                         <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
-                                            <strong><p>{{message}}</p></strong>
+                                            <p>
+                                                <strong>
+                                                    {{message}}
+                                                </strong>
+                                            </p>
                                         </li>
                                         {% endfor %}
                                     </ul>
@@ -158,10 +163,13 @@
                             </div>
                             <br>
                             <p>
-                                Please include as many details as possible in your initial message. Be sure to let me
-                                know exactly WHAT you want read, HOW you want it read and WHEN you need it delivered
-                                ! Also, be sure to indicate if there are any WORDS or NAMES with unique
-                                pronunciation!
+                                <strong>
+                                    Please include as many details as possible in your initial message. Be sure to let
+                                    me
+                                    know exactly WHAT you want read, HOW you want it read and WHEN you need it delivered
+                                    ! Also, be sure to indicate if there are any WORDS or NAMES with unique
+                                    pronunciation!
+                                </strong>
                             </p>
                             <br>
                             <div class="row">
