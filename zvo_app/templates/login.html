@@ -74,6 +74,21 @@
         <div class="login content container">
             <div class="container">
                 <h1 id="login_greeting">Administrative Login</h1>
+
+                {% if messages %}
+                <div class="row">
+                    <div class="col">
+                        <ul class="messages">
+                            {% for message in messages %}
+                            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+                                <p><strong>{{message}}</strong></p>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endif %}
+
                 <div id="login_form" class="container">
                     <form action="/admin/login" method="POST">
                         {% csrf_token %}
@@ -99,19 +114,7 @@
                                 </div>
                             </div>
                         </div>
-                        {% if messages %}
-                        <div class="row">
-                            <div class="col">
-                                <ul class="messages">
-                                    {% for message in messages %}
-                                    <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
-                                        <p><strong>{{message}}</strong></p>
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
-                        {% endif %}
+
                         <div class="row">
                             <div class="col"></div>
                             <div class="col">

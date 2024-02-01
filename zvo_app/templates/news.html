@@ -75,6 +75,14 @@
         </nav>
 
         <div class="content container">
+            <div class="row">
+                <div class="col">
+                    <div class="container">
+                        <h1>News</h1>
+                    </div>
+                </div>
+            </div>
+
             {% if messages %}
             <div class="row">
                 <div class="col">
@@ -88,14 +96,6 @@
                 </div>
             </div>
             {% endif %}
-
-            <div class="row">
-                <div class="col">
-                    <div class="container">
-                        <h1>News</h1>
-                    </div>
-                </div>
-            </div>
 
             {% for article in articles %}
             <br>
