@@ -105,7 +105,7 @@
                     <div class="container">
                         <h2 class="zeebo_orange">{{article.headline}}</h2>
                         <h4 class="zeebo_purple">{{article.created_at}}</h4>
-                        <p>{{article.body | safe | linebreaksbr}}</p>
+                        <p><strong>{{article.body | safe | linebreaksbr}}</strong></p>
                         {% if userIsAdmin %}
                         <a href="admin/delete/article/{{article.id}}" class="btn-primary btn-sm">-Delete-</a>
                         {% endif %}
@@ -118,7 +118,7 @@
 
         <div id="footer">
             <p><strong>Copyright ©2020 Zachery A. Bielicki, all rights reserved</strong></p>
-            <a class="btn btn-sm btn-link" href="/login">Admin Dash</a>
+            <a class="btn btn-sm btn-link zeebo_purple" href="/login">Admin Dash</a>
         </div>
     </div>
 
