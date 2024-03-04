@@ -233,7 +233,7 @@ textarea.form-control {
 }
 
 a#nav_item_active.nav-link.disabled {
-    color: #800080;
+    color: #ffa500;
 }
 
 #header .nav-link {
