@@ -161,14 +161,14 @@ def admin_delete_article(request, articleId):
     return redirect('/news')
 
 
-def bookings(request):
+def contact(request):
     if request.method == 'POST':
         errors = Message.objects.message_validator(request.POST)
 
         if len(errors) > 0:
             for key, value in errors.items():
                 messages.error(request, value)
-            return redirect('/bookings')
+            return redirect('/contact')
         else:
             Message.objects.create(name=request.POST['msgName'], email=request.POST['msgEmail'],
                                    content=request.POST['msgContent'], script_url=request.POST['msgURL'])
@@ -193,9 +193,9 @@ def bookings(request):
                 server.sendmail(smtp_email, zeebovo_inbox, message)
                 
             messages.success(request, "Message successfully sent!")
-            return redirect('/bookings')
+            return redirect('/contact')
     else:
-        return render(request, 'bookings.html')
+        return render(request, 'contact.html')
 
 
 def login(request):

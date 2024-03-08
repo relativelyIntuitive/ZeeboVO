@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <div id="wrapper" class="bookings container">
+    <div id="wrapper" class="contact container">
         <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,8 +54,8 @@
                         <a class="nav-link" href="/news">News</a>
                     </li>
                     <li class="nav-item active">
-                        <a id="nav_item_active" class="nav-link disabled" href="/bookings">
-                            <strong>Bookings</strong>
+                        <a id="nav_item_active" class="nav-link disabled" href="/contact">
+                            <strong>Contact</strong>
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -80,9 +80,12 @@
             <div class="row">
                 <div class="col">
                     <div class="container">
-                        <h1>Contact Form</h1>
+                        <h1>Contact Me</h1>
                         <br>
-                        <p><strong>For general inquiries, or quotes & estimates, this is the right place to be. Please
+                        <p><strong>Email: ZeeboVO@gmail.com</strong></p>
+                        <br>
+                        <p><strong>For general inquiries, quotes, or estimates, this is the right place to be. Please
+                                contact me at the e-mail address listed above, or
                                 fill out
                                 the form below, making sure to include a script if applicable and I will respond via
                                 e-mail
@@ -100,7 +103,7 @@
                             {% if messages %}
                             <div class="row">
                                 <div class="col">
-                                    <ul id="bookings_msgs" class="messages">
+                                    <ul id="contact_msgs" class="messages">
                                         {% for message in messages %}
                                         <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
                                             <p><strong>{{message}}</strong></p>

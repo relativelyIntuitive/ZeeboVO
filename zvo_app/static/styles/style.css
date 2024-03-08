@@ -166,7 +166,7 @@ ul {
     border: 3px solid #800080
 }
 
-#bookings_msgs {
+#contact_msgs {
     padding-inline-start: 0px;
 }
 
@@ -293,7 +293,7 @@ a#nav_item_active.nav-link.disabled {
         background-image: url("/static/images/backgrounds/mixing_table_landscape.jpeg");
     }
 
-    #wrapper.bookings {
+    #wrapper.contact {
         background-image: url("/static/images/backgrounds/gold_mic_landscape.jpg");
     }
 
